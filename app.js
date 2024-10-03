@@ -83,6 +83,27 @@ app.post('/userGroupByState', (req, res) => {
   res.json(groupedUsers);
 });
 
+/**
+@method POST
+@route /searchUsers
+@param {String} searchParam
+@return {Array<User>} users with any field matching searchParam
+*/
+app.post('/searchUsers', (req, res) => {
+  const searchParam = req.body.searchParam.toLowerCase();
+  const users = fetchedData.filter(user => 
+    Object.values(user).some(value => 
+      typeof value === 'object' && value !== null 
+        ? Object.values(value).some(addrValue => 
+            String(addrValue).toLowerCase().includes(searchParam) // Check nested properties
+          )
+        : String(value).toLowerCase().includes(searchParam) // Check other properties
+    )
+  );
+  // Response
+  res.json(users);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
