@@ -19,6 +19,7 @@ This repository contains a solution to the Opiniion backend advanced coding chal
 - Create dev branch
 - Protect main/master branch from unapproved PRs.
 - Create tests.
+- Investigate app.use(express.json()) vs app.use(bodyParser.json()) 
 
 # Specifications
 /*
