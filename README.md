@@ -16,6 +16,9 @@ This repository contains a solution to the Opiniion backend advanced coding chal
 - Drop Axios for builtin Fetch API.
 - Raise GitHub Issues and drop Todos on README.md
 - Maybe create master branch and drop main branch.
+- Create dev branch
+- Protect main/master branch from unapproved PRs.
+- Create tests.
 
 # Specifications
 /*
