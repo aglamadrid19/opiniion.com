@@ -12,7 +12,6 @@ const fetchData = async () => {
   try {
     const response = await axios.get('https://dummyapi.online/api/users'); // Replace with your API endpoint
     fetchedData = response.data; // Store the fetched data
-    console.log('Data fetched:', fetchedData);
   } catch (error) {
     console.error('Error fetching data:', error);
   }
