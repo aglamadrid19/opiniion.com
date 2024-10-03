@@ -1,5 +1,5 @@
 # Opiniion.com
-This repository contains a solution to the Opiniion backend coding challenge
+This repository contains a solution to the Opiniion backend advanced coding challenge.
 
 # Considerations
 - Put the routes in a separate file.
@@ -9,6 +9,7 @@ This repository contains a solution to the Opiniion backend coding challenge
 - Create API docs, hopefully with a playground.
 - Path parameters vs query parameters in a RESTful API.
 - Configure CI/CD (GitHub Actions?)
+- Add CORS
 
 # Specifications
 /*
