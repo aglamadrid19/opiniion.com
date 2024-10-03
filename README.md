@@ -2,7 +2,7 @@
 This repository contains a solution to the Opiniion backend advanced coding challenge.
 
 # Todos
-- Add Express router.
+- Add Express router. (Completed)
 - Implement mock mongo db connection and queries.
 - Add authentication to the API.
 - Use node-cron for scheduled task.
@@ -12,6 +12,9 @@ This repository contains a solution to the Opiniion backend advanced coding chal
 - Add CORS.
 - On updateUser endpoint refactor so new user.address object does not overoverride all the properties in the original.
 - Add TypeScript support.
+- Create /users endpoint for userRouter.
+- Drop Axios for builtin Fetch API.
+- Raise GitHub issues and drop Todos on README.md
 
 # Specifications
 /*
