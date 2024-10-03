@@ -104,6 +104,29 @@ app.post('/searchUsers', (req, res) => {
   res.json(users);
 });
 
+/**
+@method POST
+@route /updateUser
+@param {Int} userId
+@param {Dict} fieldsToUpdate
+@return {User} updated user object matching userId
+*/
+app.post('/updateUser', (req, res) => {
+  const userId = parseInt(req.body.userId);
+  const fieldsToUpdate = req.body.fieldsToUpdate;
+  let user = fetchedData.find(user => user.id === userId);
+
+  if (user) {
+    user = { ...user, ...fieldsToUpdate };
+    fetchedData = fetchedData.map(u => (u.id === userId ? user : u));
+    // Response
+    res.json(user);
+  } else {
+    // Response
+    res.status(404).json({ message: 'User not found' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
