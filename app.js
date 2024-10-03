@@ -25,6 +25,19 @@ setInterval(fetchData, 60000);
 // Initial fetch when the server starts
 fetchData();
 
+/**
+@method Get
+@route /userById
+@param {Int} userId
+@return {User} the user with the id that matches the userId param
+*/
+app.get('/userById', (req, res) => {
+  const userId = parseInt(req.query.userId);
+  const user = fetchedData.find(user => user.id === userId);
+  // Response
+  res.json(user || {});
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
