@@ -19,7 +19,10 @@ This repository contains a solution to the Opiniion backend advanced coding chal
 - Create dev branch
 - Protect main/master branch from unapproved PRs.
 - Create tests.
-- Investigate app.use(express.json()) vs app.use(bodyParser.json()) 
+- Investigate app.use(express.json()) vs app.use(bodyParser.json())
+- Compare and standarize response of /userById and /updateUser
+- Investigate containerization for RESTful API development and deployment.
+- Compare API performance and resource usage using other technologies such as Python, C#, Go and/or Rust.
 
 # Specifications
 /*
