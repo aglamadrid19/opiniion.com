@@ -54,6 +54,19 @@ app.post('/getUserByState', (req, res) => {
   res.json(users);
 });
 
+/**
+@method POST
+@route /countByState
+@return {Array<String, Int>} all existing states with the number of users within them
+*/
+app.post('/countByState', (req, res) => {
+  const stateCount = fetchedData.reduce((acc, user) => {
+    acc[user.address.state] = (acc[user.address.state] || 0) + 1;
+    return acc;
+  }, {});
+  res.json(stateCount);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
