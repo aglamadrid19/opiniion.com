@@ -41,6 +41,19 @@ app.get('/userById', (req, res) => {
   res.json(user || {});
 });
 
+/**
+@method POST
+@route /getUserByState
+@param {String} stateCode
+@return {Array<User>} users with the state matching the stateCode param
+*/
+app.post('/getUserByState', (req, res) => {
+  const stateCode = req.body.stateCode;
+  const users = fetchedData.filter(user => user.address.state === stateCode);
+  // Response
+  res.json(users);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
