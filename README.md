@@ -1,15 +1,16 @@
 # Opiniion.com
 This repository contains a solution to the Opiniion backend advanced coding challenge.
 
-# Considerations
-- Put the routes in a separate file.
+# Todos
+- Add Express router.
 - Implement mock mongo db connection and queries.
 - Add authentication to the API.
 - Use node-cron for scheduled task.
 - Create API docs, hopefully with a playground.
 - Path parameters vs query parameters in a RESTful API.
-- Configure CI/CD (GitHub Actions?)
-- Add CORS
+- Configure CI/CD (GitHub Actions?).
+- Add CORS.
+- On updateUser endpoint refactor so new user.address object does not overoverride all the properties in the original.
 
 # Specifications
 /*
@@ -60,8 +61,6 @@ Make sure to emphasize efficiency, reusability, readability, and maintainability
 @param {Dict} fieldsToUpdate
 @return {User} updated user object matching userId
 */
-
-
 
 router.post('/sampleExpressRoute', function(res, req) {
   res.send('Finished!');
