@@ -1,5 +1,14 @@
 # Opiniion.com
-This repository contains the solution to the Opiniion backend coding challenge
+This repository contains a solution to the Opiniion backend coding challenge
+
+# Considerations
+- Put the routes in a separate file.
+- Implement mock mongo db connection and queries.
+- Add authentication to the API.
+- Use node-cron for scheduled task.
+- Create API docs, hopefully with a playground.
+- Path parameters vs query parameters in a RESTful API.
+- Configure CI/CD (GitHub Actions?)
 
 # Specifications
 /*
@@ -56,4 +65,17 @@ Make sure to emphasize efficiency, reusability, readability, and maintainability
 router.post('/sampleExpressRoute', function(res, req) {
   res.send('Finished!');
 });
+
+# Run
+Development
+```
+npm run dev
+```
+
+Production
+```
+npm run start
+```
+
+
 
