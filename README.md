@@ -11,6 +11,7 @@ This repository contains a solution to the Opiniion backend advanced coding chal
 - Configure CI/CD (GitHub Actions?).
 - Add CORS.
 - On updateUser endpoint refactor so new user.address object does not overoverride all the properties in the original.
+- Add TypeScript support.
 
 # Specifications
 /*
