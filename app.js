@@ -68,6 +68,21 @@ app.post('/countByState', (req, res) => {
   res.json(stateCount);
 });
 
+/**
+@method POST
+@route /userGroupByState
+@return {Array<String, {Array<User>}>} all existing states with the complete user objects within them
+*/
+app.post('/userGroupByState', (req, res) => {
+  const groupedUsers = fetchedData.reduce((acc, user) => {
+    if (!acc[user.address.state]) acc[user.address.state] = [];
+    acc[user.address.state].push(user);
+    return acc;
+  }, {});
+  // Response
+  res.json(groupedUsers);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
