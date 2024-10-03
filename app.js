@@ -64,6 +64,7 @@ app.post('/countByState', (req, res) => {
     acc[user.address.state] = (acc[user.address.state] || 0) + 1;
     return acc;
   }, {});
+  // Response
   res.json(stateCount);
 });
 
